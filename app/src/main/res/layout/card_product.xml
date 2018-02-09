@@ -3,69 +3,57 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="16dp">
-    <android.support.v7.widget.CardView
+    android:layout_height="match_parent">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:background="@color/colorWhite"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        card_view:cardCornerRadius="4dp"
-        android:elevation="100dp"
-        android:contextClickable="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="16dp">
+        <LinearLayout
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp">
-            <LinearLayout
-                android:id="@+id/image"
+            android:layout_centerVertical="true">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_picture_user"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user"
+                app:civ_border_color="#ecf0f1"
+                app:civ_border_width="0.5dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_toRightOf="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true">
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_picture_user"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/user"
-                    app:civ_border_color="#ecf0f1"
-                    app:civ_border_width="0.5dp" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/content"
-                android:layout_toRightOf="@+id/image"
+                android:text="X - Banner Flexy China"
+                android:textStyle="bold"/>
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="16dp"
-                android:layout_centerVertical="true">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="X - Banner Flexy China"
-                    android:textStyle="bold"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="mulai dari Rp 75.000"/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_navigate_next"/>
-            </LinearLayout>
-        </RelativeLayout>
+                android:text="mulai dari Rp 75.000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_navigate_next"/>
+        </LinearLayout>
+    </RelativeLayout>
 
-    </android.support.v7.widget.CardView>
 </LinearLayout>
