@@ -3,7 +3,9 @@ package id.noidea.printin;
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -25,6 +27,10 @@ public class PreviewJenisActivity extends AppCompatActivity implements BaseSlide
 
         mDemoSlider = findViewById(R.id.slider);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle(null);
 
         HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
         file_maps.put("1",R.drawable.slide_1);
@@ -48,6 +54,15 @@ public class PreviewJenisActivity extends AppCompatActivity implements BaseSlide
     }
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                super.finish();
+        }
+        return true;
+    }
+
+    @Override
     public void onStop() {
         mDemoSlider.stopAutoCycle();
         super.onStop();
@@ -66,4 +81,5 @@ public class PreviewJenisActivity extends AppCompatActivity implements BaseSlide
 
     @Override
     public void onPageScrollStateChanged(int state) {}
+
 }
