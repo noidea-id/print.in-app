@@ -74,7 +74,7 @@
                 android:layout_marginTop="30dp"
                 android:background="@drawable/edit_text_bg1"
                 android:fontFamily="sans-serif"
-                android:hint="E-Mail"
+                android:hint="E-mail"
                 android:inputType="textEmailAddress"
                 android:padding="12dp"
                 android:textAlignment="center"
@@ -108,7 +108,8 @@
                 android:background="@drawable/button_bg"
                 android:text="MASUK"
                 android:textColor="@color/colorWhite"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:layout_marginBottom="50dp"/>
 
 
         </RelativeLayout>
