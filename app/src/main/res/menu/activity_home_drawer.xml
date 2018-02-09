@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_product"
+            android:icon="@drawable/ic_print"
+            android:title="Lihat Produk" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search"
+            android:title="Pencarian Produk" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_view_list"
+            android:title="Pesanan Saya" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings"
+            android:title="Pengaturan" />
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/ic_help"
+            android:title="FAQ" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_call"
+            android:title="Kontak" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_exit_to_app"
+            android:title="Keluar" />
+    </group>
+
+</menu>
