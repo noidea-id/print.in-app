@@ -86,21 +86,41 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_product) {
-            // Handle the camera action
-        } else if (id == R.id.nav_search) {
+        if (session.isLoggedIn() == TRUE) {
+            if (id == R.id.nav_product) {
+                // Handle the camera action
+            } else if (id == R.id.nav_search) {
 
-        } else if (id == R.id.nav_order) {
+            } else if (id == R.id.nav_order) {
 
-        } else if (id == R.id.nav_setting) {
+            } else if (id == R.id.nav_setting) {
 
-        } else if (id == R.id.nav_faq) {
+            } else if (id == R.id.nav_faq) {
 
-        } else if (id == R.id.nav_contact) {
+            } else if (id == R.id.nav_contact) {
 
-        } else if (id == R.id.nav_exit) {
+            } else if (id == R.id.nav_exit) {
+            }
+        } else {
+            if (id == R.id.nav_product) {
+                // Handle the camera action
+            } else if (id == R.id.nav_search) {
 
+            } else if (id == R.id.nav_order) {
+
+            } else if (id == R.id.nav_setting) {
+
+            } else if (id == R.id.nav_faq) {
+
+            } else if (id == R.id.nav_contact) {
+
+            } else if (id == R.id.nav_exit) {
+                Intent intent = new Intent(getBaseContext(), LoginActivity.class);
+                startActivity(intent);
+            }
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
