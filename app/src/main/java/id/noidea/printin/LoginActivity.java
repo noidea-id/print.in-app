@@ -111,22 +111,21 @@ public class LoginActivity extends AppCompatActivity {
                     try {
                         session.createLoginSession(itemLogin.getUserId(), itemLogin.getName(), itemLogin.getEmail(), itemLogin.getRole(), itemLogin.getAvatar(), itemLogin.getToken().getAccessToken());
                         Intent intent = new Intent(getBaseContext(), HomeActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         finish();
                     } catch(Exception ex) {
-                        Log.w("Login Exception:", ex.getMessage());
-                        Toast.makeText(LoginActivity.this, "Username atau Password salah!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginActivity.this, "Email atau Password salah!", Toast.LENGTH_SHORT).show();
                     }
 
 
                 } else {
-                    Toast.makeText(LoginActivity.this, "Username atau Password salah!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Email atau Password salah!", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<ItemLogin> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

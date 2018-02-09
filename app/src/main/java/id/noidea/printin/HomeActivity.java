@@ -1,5 +1,6 @@
 package id.noidea.printin;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -22,9 +24,11 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import id.noidea.printin.Session.SessionManager;
 
 import static java.lang.Boolean.TRUE;
@@ -54,12 +58,31 @@ public class HomeActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        session = new SessionManager(HomeActivity.this);
+
+        session = new SessionManager(getApplicationContext());
 
         if (session.isLoggedIn() == TRUE) {
             setContentView(R.layout.activity_home);
+
+
+
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+
+            CircleImageView profilePictures =  navigationView.getHeaderView(0).findViewById(R.id.profile_picture_user);
+            TextView name = navigationView.getHeaderView(0).findViewById(R.id.nameView);
+
+//        String imageUrl = session.getAvatar();
+            name.setText(session.getName());
+//        Picasso.with(getApplicationContext()).load(imageUrl).into(profilePictures);
+
+
+
         } else {
             setContentView(R.layout.activity_home_guest);
+
+            NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
         }
 
         /* SET FONT HERE */
@@ -108,9 +131,6 @@ public class HomeActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         btnBanner = findViewById(R.id.menu_banner);
         btnBanner.setOnClickListener(new View.OnClickListener() {
@@ -189,7 +209,8 @@ public class HomeActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.notif) {
-            return true;
+            Intent intent = new Intent(getBaseContext(), NotificationActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -215,6 +236,11 @@ public class HomeActivity extends AppCompatActivity
             } else if (id == R.id.nav_contact) {
 
             } else if (id == R.id.nav_exit) {
+                session.logoutUser();
+                Intent intent = new Intent(getBaseContext(), HomeActivity.class);
+                startActivity(intent);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish();
             }
         } else {
             if (id == R.id.nav_product) {
