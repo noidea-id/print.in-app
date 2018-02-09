@@ -1,12 +1,15 @@
 package id.noidea.printin;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +22,7 @@ import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import java.util.HashMap;
 
 public class PreviewJenisActivity extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
+    RelativeLayout btnPilih;
 
     SliderLayout mDemoSlider;
 
@@ -70,6 +74,17 @@ public class PreviewJenisActivity extends AppCompatActivity implements BaseSlide
 //        mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Invisible);
         mDemoSlider.addOnPageChangeListener(this);
         mDemoSlider.setCustomIndicator((PagerIndicator) findViewById(R.id.custom_indicator));
+
+        btnPilih = findViewById(R.id.btnPilih);
+
+        btnPilih.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PreviewJenisActivity.this, ProductActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
