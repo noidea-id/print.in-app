@@ -6,18 +6,22 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
     RelativeLayout btnRegister;
-
+    EditText inputEmail, inputPasword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         btnRegister = findViewById(R.id.btnRegister);
+        inputEmail = findViewById(R.id.input_email);
+        inputPasword = findViewById(R.id.input_password);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
