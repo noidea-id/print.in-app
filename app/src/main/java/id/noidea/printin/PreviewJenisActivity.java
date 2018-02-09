@@ -1,11 +1,13 @@
 package id.noidea.printin;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -20,10 +22,27 @@ public class PreviewJenisActivity extends AppCompatActivity implements BaseSlide
 
     SliderLayout mDemoSlider;
 
+    TextView label_toolbar;
+    TextView tvPreview1;
+    TextView tvPreview2;
+    TextView tvPreview3;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_preview_jenis);
+
+        Typeface lato_semibold = Typeface.createFromAsset(getAssets(), "font/lato_semi_bold.ttf");
+        Typeface lato_regular = Typeface.createFromAsset(getAssets(), "font/lato_regular.ttf");
+
+        label_toolbar = findViewById(R.id.label_toolbar);
+        label_toolbar.setTypeface(lato_semibold);
+        tvPreview1 = findViewById(R.id.tvPreview1);
+        tvPreview1.setTypeface(lato_semibold);
+        tvPreview2 = findViewById(R.id.tvPreview2);
+        tvPreview2.setTypeface(lato_regular);
+        tvPreview3 = findViewById(R.id.tvPreview3);
+        tvPreview3.setTypeface(lato_semibold);
 
         mDemoSlider = findViewById(R.id.slider);
 

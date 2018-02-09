@@ -52,6 +52,7 @@
                         android:layout_alignParentBottom="true">
 
                         <TextView
+                            android:id="@+id/tvBanner"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Banner"
@@ -91,6 +92,7 @@
                         android:layout_alignParentBottom="true">
 
                         <TextView
+                            android:id="@+id/tvPoster"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Poster"
@@ -133,6 +135,7 @@
                         android:layout_alignParentBottom="true">
 
                         <TextView
+                            android:id="@+id/tvBrosur"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Brosur"
@@ -173,6 +176,7 @@
                         android:layout_alignParentBottom="true">
 
                         <TextView
+                            android:id="@+id/tvStiker"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Stiker"
@@ -215,6 +219,7 @@
                         android:layout_alignParentBottom="true">
 
                         <TextView
+                            android:id="@+id/tvBulletin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Bulletin"
@@ -254,6 +259,7 @@
                         android:layout_alignParentBottom="true">
 
                         <TextView
+                            android:id="@+id/tvKalendar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Kalender"

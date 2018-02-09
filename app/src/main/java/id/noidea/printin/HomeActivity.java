@@ -1,6 +1,7 @@
 package id.noidea.printin;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.daimajia.slider.library.Indicators.PagerIndicator;
@@ -41,6 +43,13 @@ public class HomeActivity extends AppCompatActivity
     RelativeLayout btnBulletin;
     RelativeLayout btnKalender;
 
+    TextView tvBanner;
+    TextView tvPoster;
+    TextView tvBrosur;
+    TextView tvKalender;
+    TextView tvBulletin;
+    TextView tvStiker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +61,22 @@ public class HomeActivity extends AppCompatActivity
         } else {
             setContentView(R.layout.activity_home_guest);
         }
+
+        /* SET FONT HERE */
+        Typeface lato_bold = Typeface.createFromAsset(getAssets(), "font/lato_bold.ttf");
+
+        tvBanner = (TextView)findViewById(R.id.tvBanner);
+        tvBanner.setTypeface(lato_bold);
+        tvPoster = (TextView)findViewById(R.id.tvPoster);
+        tvPoster.setTypeface(lato_bold);
+        tvBrosur = (TextView)findViewById(R.id.tvBrosur);
+        tvBrosur.setTypeface(lato_bold);
+        tvKalender = (TextView)findViewById(R.id.tvKalendar);
+        tvKalender.setTypeface(lato_bold);
+        tvBulletin = (TextView)findViewById(R.id.tvBulletin);
+        tvBulletin.setTypeface(lato_bold);
+        tvStiker = (TextView)findViewById(R.id.tvStiker);
+        tvStiker.setTypeface(lato_bold);
 
         /* HERE LIES SLIDER FUNCTION */
         mDemoSlider = findViewById(R.id.slider);

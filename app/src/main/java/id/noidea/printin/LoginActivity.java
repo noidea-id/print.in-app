@@ -1,6 +1,7 @@
 package id.noidea.printin;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -21,16 +22,23 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static java.lang.Boolean.TRUE;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
     RelativeLayout btnRegister;
-    EditText inputEmail, inputPassword;
+    EditText inputEmail;
+    EditText inputPassword;
 
     SessionManager session;
 
     Button btnLogin;
     InterfaceLogin login;
+
+    TextView label_toolbar;
+    TextView judul;
+    TextView tvBtn;
+    TextView tvLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +58,23 @@ public class LoginActivity extends AppCompatActivity {
             inputEmail = findViewById(R.id.input_email);
             inputPassword = findViewById(R.id.input_password);
             btnLogin = findViewById(R.id.btn_login);
+
+            Typeface lato_semibold = Typeface.createFromAsset(getAssets(), "font/lato_semi_bold.ttf");
+
+            label_toolbar = findViewById(R.id.label_toolbar);
+            label_toolbar.setTypeface(lato_semibold);
+            judul = findViewById(R.id.textView);
+            judul.setTypeface(lato_semibold);
+            tvBtn = findViewById(R.id.tvBtn);
+            tvBtn.setTypeface(lato_semibold);
+            tvLogin = findViewById(R.id.btn_login);
+            tvLogin.setTypeface(lato_semibold);
+            inputEmail.setTypeface(lato_semibold);
+            inputPassword.setTypeface(lato_semibold);
+
+            btnRegister = findViewById(R.id.btnRegister);
+            inputEmail = findViewById(R.id.input_email);
+            inputPassword = findViewById(R.id.input_password);
 
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
