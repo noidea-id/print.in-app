@@ -5,6 +5,7 @@ import android.graphics.PorterDuff;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 
 public class SplashActivity extends AppCompatActivity {
@@ -19,13 +20,20 @@ public class SplashActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
+
         progressBar.getIndeterminateDrawable().setColorFilter(getResources()
                 .getColor(R.color.colorWhite), PorterDuff.Mode.SRC_IN);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+
+               Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
+
                 startActivity(intent);
                 finish();
             }
