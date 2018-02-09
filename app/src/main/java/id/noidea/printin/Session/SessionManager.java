@@ -23,12 +23,13 @@ public class SessionManager {
         editor = pref.edit();
     }
 
-    public void createLoginSession(String id, String name, String role, String photo, String token){
+    public void createLoginSession(String id, String name, String email, String role, String avatar, String token){
         editor.putBoolean(IS_LOGIN, true);
         editor.putString("id", id);
         editor.putString("name", name);
+        editor.putString("email", email);
         editor.putString("role", role);
-        editor.putString("photo", photo);
+        editor.putString("avatar", avatar);
         editor.putString("token", token);
         editor.commit();
     }
@@ -39,10 +40,13 @@ public class SessionManager {
     public String getName() {
         return pref.getString("name", null);
     }
+    public String getEmail() {
+        return pref.getString("email", null);
+    }
     public String getRole() {
         return pref.getString("role", null);
     }
-    public String getPhoto() {
+    public String getAvatar() {
         return pref.getString("photo", null);
     }
     public String getToken() {
