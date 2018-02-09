@@ -6,23 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-public class LoginActivity extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
-    RelativeLayout btnRegister;
+    RelativeLayout btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_sign_up);
 
-        btnRegister = findViewById(R.id.btnRegister);
+        btnLogin = findViewById(R.id.btnLogin);
 
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
-
-                startActivity(intent);
+                finish();
             }
         });
     }

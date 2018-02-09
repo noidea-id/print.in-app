@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -24,7 +24,14 @@
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PreviewJenisActivity"></activity>
     </application>
 
 </manifest>

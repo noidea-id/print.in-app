@@ -22,12 +22,12 @@
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dp"
-                android:src="@drawable/printin_logo" />
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_person_add" />
 
             <TextView
                 android:id="@+id/textView"
@@ -36,18 +36,33 @@
                 android:layout_below="@+id/imageView2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:text="Silahkan masuk dengan akun anda"
+                android:text="Daftar untuk transaksi"
                 android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/inputNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edit_text_bg1"
+                android:fontFamily="sans-serif"
+                android:hint="Nama Lengkap"
+                android:inputType="text"
+                android:padding="12dp"
+                android:textAlignment="center"
+                android:textColor="#000"
                 android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/inputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/inputNama"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/edit_text_bg1"
                 android:fontFamily="sans-serif"
                 android:hint="E-Mail"
@@ -82,10 +97,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/button_bg"
-                android:text="MASUK"
+                android:onClick="login"
+                android:text="DAFTAR"
                 android:textColor="@color/colorWhite"
-                android:textSize="18sp"
-                android:onClick="login"/>
+                android:textSize="18sp" />
 
 
         </RelativeLayout>
@@ -93,19 +108,18 @@
     </ScrollView>
 
     <RelativeLayout
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
         android:background="@color/colorWhite">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/sudah_memiliki_akun_masuk_sekarang"
             android:layout_centerInParent="true"
-            android:padding="16dp"
-            android:text="@string/belum_memiliki_akun_daftar_sekarang" />
+            android:padding="16dp"/>
 
     </RelativeLayout>
 

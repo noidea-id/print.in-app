@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Print.in App.iml" filepath="$PROJECT_DIR$/Print.in App.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/print.in-app.iml" filepath="$PROJECT_DIR$/print.in-app.iml" />
+      <module fileurl="file://D:\COMPETITION\ARKAVIDIA\Print.in App\print.in-app.iml" filepath="D:\COMPETITION\ARKAVIDIA\Print.in App\print.in-app.iml" />
     </modules>
   </component>
 </project>
