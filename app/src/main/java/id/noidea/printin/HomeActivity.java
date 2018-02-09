@@ -8,17 +8,38 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.daimajia.slider.library.Indicators.PagerIndicator;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
+import com.daimajia.slider.library.Tricks.ViewPagerEx;
+
+import java.util.HashMap;
 
 import id.noidea.printin.Session.SessionManager;
 
 import static java.lang.Boolean.TRUE;
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
     SessionManager session;
+
+    SliderLayout mDemoSlider;
+
+    RelativeLayout btnBanner;
+    RelativeLayout btnPoster;
+    RelativeLayout btnBrosur;
+    RelativeLayout btnStiker;
+    RelativeLayout btnBulletin;
+    RelativeLayout btnKalender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +53,26 @@ public class HomeActivity extends AppCompatActivity
             setContentView(R.layout.activity_home_guest);
         }
 
+        /* HERE LIES SLIDER FUNCTION */
+        mDemoSlider = findViewById(R.id.slider);
+        HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
+        file_maps.put("1",R.drawable.home_slider1);
+        file_maps.put("2",R.drawable.home_slider2);
+        file_maps.put("3",R.drawable.home_slider3);
 
+        for(String name : file_maps.keySet()){
+            DefaultSliderView sliderView = new DefaultSliderView(getBaseContext());
+            // initialize a SliderLayout
+            sliderView
+                    .image(file_maps.get(name))
+                    .setScaleType(BaseSliderView.ScaleType.Fit);
+
+            mDemoSlider.addSlider(sliderView);
+        }
+        mDemoSlider.setPresetTransformer(SliderLayout.Transformer.Default);
+        mDemoSlider.setDuration(3000);
+        mDemoSlider.setIndicatorVisibility(PagerIndicator.IndicatorVisibility.Invisible);
+        mDemoSlider.addOnPageChangeListener(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -46,6 +86,56 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        btnBanner = findViewById(R.id.menu_banner);
+        btnBanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PreviewJenisActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnPoster = findViewById(R.id.menu_poster);
+        btnPoster.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PreviewJenisActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnBrosur = findViewById(R.id.menu_brosur);
+        btnBrosur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PreviewJenisActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnStiker = findViewById(R.id.menu_stiker);
+        btnStiker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PreviewJenisActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnBulletin = findViewById(R.id.menu_bulletin);
+        btnBulletin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PreviewJenisActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnKalender = findViewById(R.id.menu_kalender);
+        btnKalender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PreviewJenisActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -126,4 +216,25 @@ public class HomeActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    /* FUNC FOR SLIDER */
+    @Override
+    public void onStop() {
+        mDemoSlider.stopAutoCycle();
+        super.onStop();
+    }
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
+        Toast.makeText(getBaseContext(),slider.getBundle().get("extra") + "",Toast.LENGTH_SHORT).show();
+    }
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+
+    @Override
+    public void onPageSelected(int position) {
+        Log.d("Slider Demo", "Page Changed: " + position);
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {}
 }
