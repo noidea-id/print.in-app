@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Print.in</string>
+    <string name="belum_memiliki_akun_daftar_sekarang">Belum memiliki akun? <b>Daftar sekarang</b></string>
 </resources>
