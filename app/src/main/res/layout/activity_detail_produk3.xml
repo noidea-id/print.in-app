@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGray"
-    tools:context="id.noidea.printin.LoginActivity"
-    android:focusable="true"
-    android:focusableInTouchMode="true">
+    tools:context="id.noidea.printin.DetailProduk3Activity">
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -100,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Pilih Paket Cetak X-Banner"
+                    android:text="Pilih Paket Cetak Rollup Banner"
                     android:textColor="@color/colorAccent"
                     android:textSize="18sp" />
 
@@ -141,12 +138,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X - Banner Flexy 240"
+                            android:text="Rollup Banner Solvent Albatros"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rp 65.000"/>
+                            android:text="Rp 235.000"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -196,12 +193,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X - Banner Luster"
+                            android:text="Rollup Banner PVC Premium"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rp 100.000"/>
+                            android:text="Rp 260.000"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -251,12 +248,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="X - Banner Solvent Albatros"
+                            android:text="Rollup Banner Luster"
                             android:textStyle="bold"/>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Rp 90.000"/>
+                            android:text="Rp 245.000"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -274,5 +271,4 @@
         </RelativeLayout>
 
     </ScrollView>
-
 </RelativeLayout>

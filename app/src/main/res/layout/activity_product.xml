@@ -51,12 +51,15 @@
             <!--</RelativeLayout>-->
 
             <RelativeLayout
+                android:id="@+id/product_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
                 <LinearLayout
                     android:id="@+id/image"
                     android:layout_width="wrap_content"
@@ -88,7 +91,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="mulai dari Rp 75.000 per meter"/>
+                        android:text="mulai dari Rp 15.000 per meter"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -103,20 +106,23 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/product_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
                 <LinearLayout
-                    android:id="@+id/image"
+                    android:id="@+id/image2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true">
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/profile_picture_user"
+                        android:id="@+id/profile_picture_user2"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/slide_1"
@@ -125,8 +131,8 @@
                         app:civ_border_width="0.5dp" />
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/content"
-                    android:layout_toRightOf="@+id/image"
+                    android:id="@+id/content2"
+                    android:layout_toRightOf="@+id/image2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -140,7 +146,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="mulai dari Rp 75.000"/>
+                        android:text="mulai dari Rp 100.000"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -155,20 +161,23 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/product_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
                 <LinearLayout
-                    android:id="@+id/image"
+                    android:id="@+id/image3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true">
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/profile_picture_user"
+                        android:id="@+id/profile_picture_user3"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/slide_1"
@@ -177,8 +186,8 @@
                         app:civ_border_width="0.5dp" />
                 </LinearLayout>
                 <LinearLayout
-                    android:id="@+id/content"
-                    android:layout_toRightOf="@+id/image"
+                    android:id="@+id/content3"
+                    android:layout_toRightOf="@+id/image3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -192,7 +201,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="mulai dari Rp 75.000"/>
+                        android:text="mulai dari Rp 150.000"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"

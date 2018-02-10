@@ -76,7 +76,7 @@
                         style="?android:attr/ratingBarStyleSmall"
                         android:numStars="5"
                         android:stepSize="0.1"
-                        android:rating="4.4"
+                        android:rating="4.3"
                         android:backgroundTint="#f00"
                         android:progressTint="#0f0"
                         android:secondaryProgressTint="#00f"
@@ -98,7 +98,6 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView2"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="18dp"
                     android:text="Masukkan Ukuran Banner"
@@ -121,7 +120,7 @@
                         android:layout_centerVertical="true"/>
 
                     <TextView
-                        android:id="@+id/tv_meter"
+                        android:id="@+id/tv_meter1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Meter"
@@ -130,6 +129,7 @@
                         android:layout_centerVertical="true"/>
 
                     <EditText
+                        android:id="@+id/panjang_text"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginRight="10dp"
@@ -139,7 +139,7 @@
                         android:inputType="number"
                         android:layout_alignParentTop="true"
                         android:layout_centerVertical="true"
-                        android:layout_toStartOf="@+id/tv_meter"
+                        android:layout_toStartOf="@+id/tv_meter1"
                         android:background="@drawable/edit_text_bg2" />
 
                 </RelativeLayout>
@@ -169,6 +169,7 @@
                         android:layout_centerVertical="true"/>
 
                     <EditText
+                        android:id="@+id/lebar_text"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginRight="10dp"
@@ -213,12 +214,14 @@
     </ScrollView>
 
     <RelativeLayout
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorPrimary">
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:id="@+id/tvBtn"
@@ -226,9 +229,10 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:padding="16dp"
-            android:text="BAYAR"
+            android:text="PESAN SEKARANG"
             android:textStyle="bold"
-            android:textColor="@color/colorWhite"/>
+            android:textColor="@color/colorWhite"
+            />
 
     </RelativeLayout>
 

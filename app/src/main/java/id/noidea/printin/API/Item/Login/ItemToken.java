@@ -1,11 +1,7 @@
-package id.noidea.printin.Item.Login;
+package id.noidea.printin.API.Item.Login;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-/**
- * Created by daniellindp on 09/02/2018.
- */
 
 public class ItemToken {
     @SerializedName("token_type")

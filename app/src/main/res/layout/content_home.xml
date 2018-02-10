@@ -33,6 +33,8 @@
 
                 <RelativeLayout
                     android:id="@+id/menu_banner"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
@@ -42,7 +44,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:src="@drawable/banner"
-                        android:scaleType="fitStart"/>
+                        android:scaleType="centerCrop"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -73,6 +75,8 @@
 
                 <RelativeLayout
                     android:id="@+id/menu_poster"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
@@ -82,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:src="@drawable/poster"
-                        android:scaleType="fitStart"/>
+                        android:scaleType="centerCrop"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -115,6 +119,8 @@
 
                 <RelativeLayout
                     android:id="@+id/menu_brosur"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
@@ -124,7 +130,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:src="@drawable/brosur"
-                        android:scaleType="fitStart"/>
+                        android:scaleType="centerCrop"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -155,17 +161,19 @@
 
                 <RelativeLayout
                     android:id="@+id/menu_stiker"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
                     android:layout_weight="0.475">
 
                     <ImageView
-                        android:id="@+id/menu_stiker"
+                        android:id="@+id/menu_stiker1"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:src="@drawable/stiker"
-                        android:scaleType="fitStart"/>
+                        android:scaleType="centerCrop"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -199,6 +207,8 @@
 
                 <RelativeLayout
                     android:id="@+id/menu_bulletin"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
@@ -208,7 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:src="@drawable/bulletin"
-                        android:scaleType="fitStart"/>
+                        android:scaleType="centerCrop"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -239,6 +249,8 @@
 
                 <RelativeLayout
                     android:id="@+id/menu_kalender"
+                    android:clickable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:background="@color/colorPrimary"
@@ -248,7 +260,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:src="@drawable/kalender"
-                        android:scaleType="fitStart"/>
+                        android:scaleType="centerCrop"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"

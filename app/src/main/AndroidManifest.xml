@@ -93,12 +93,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".HomeActivity" />
-
-
-        </activity>
-        <activity android:name=".MultiplePermissionsActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
         </activity>
         <activity
             android:name=".DetailProdukActivity"
@@ -106,9 +100,32 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MerchantActivity" />
+                android:value=".PreviewJenisActivity" />
         </activity>
-        <activity android:name=".DetailProduk2Activity"></activity>
+        <activity
+            android:name=".DetailProduk2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PreviewJenisActivity" />
+        </activity>
+        <activity
+            android:name=".DetailProduk3Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PreviewJenisActivity" />
+        </activity>
+        <activity android:name=".DetailOrderActivity" />
+        <activity android:name=".MerchantListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ProductActivity" />
+        </activity>
     </application>
 
 </manifest>
