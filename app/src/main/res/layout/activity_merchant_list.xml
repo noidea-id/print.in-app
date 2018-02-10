@@ -38,22 +38,22 @@
         android:layout_marginBottom="10dp"
         android:background="@color/colorWhite">
         <LinearLayout
-            android:id="@+id/image"
+            android:id="@+id/image1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true">
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_picture_user"
+                android:id="@+id/profile_picture_user1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/user"
+                android:src="@drawable/slide_1"
                 app:civ_border_color="#ecf0f1"
                 app:civ_border_width="0.5dp" />
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/content"
-            android:layout_toRightOf="@+id/image"
+            android:id="@+id/content1"
+            android:layout_toRightOf="@+id/image1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -85,17 +85,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/detail"
+                android:id="@+id/detail1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Banner Biasa"/>
+                android:text="Banner"/>
             <TextView
-                android:layout_below="@+id/detail"
+                android:layout_below="@+id/detail1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Mulai dari Rp 210.000"
+                android:text="Rp 15.000/meter"
+                android:textSize="14dp"
                 android:textAlignment="textStart"/>
         </RelativeLayout>
     </RelativeLayout>
@@ -108,22 +109,22 @@
         android:layout_marginBottom="10dp"
         android:background="@color/colorWhite">
         <LinearLayout
-            android:id="@+id/image"
+            android:id="@+id/image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true">
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_picture_user"
+                android:id="@+id/profile_picture_user2"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/user"
+                android:src="@drawable/slide_2"
                 app:civ_border_color="#ecf0f1"
                 app:civ_border_width="0.5dp" />
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/content"
-            android:layout_toRightOf="@+id/image"
+            android:id="@+id/content2"
+            android:layout_toRightOf="@+id/image2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -155,17 +156,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/detail"
+                android:id="@+id/detail2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Banner Biasa"/>
+                android:text="Banner"/>
             <TextView
-                android:layout_below="@+id/detail"
+                android:layout_below="@+id/detail2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="Mulai dari Rp 240.000"
+                android:text="Rp 21.000/meter"
+                android:textSize="14dp"
                 android:textAlignment="textStart"/>
         </RelativeLayout>
     </RelativeLayout>
@@ -187,7 +189,7 @@
                 android:id="@+id/profile_picture_user"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/user"
+                android:src="@drawable/slide_3"
                 app:civ_border_color="#ecf0f1"
                 app:civ_border_width="0.5dp" />
         </LinearLayout>
@@ -234,14 +236,15 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
-                android:text="Banner Biasa" />
+                android:text="Banner" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/detail"
-                android:text="Mulai dari Rp 190.000"
+                android:text="Rp 25.000/meter"
+                android:textSize="14dp"
                 android:textAlignment="textStart" />
         </RelativeLayout>
     </RelativeLayout>

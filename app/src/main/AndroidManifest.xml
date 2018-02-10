@@ -118,14 +118,28 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".PreviewJenisActivity" />
         </activity>
-        <activity android:name=".DetailOrderActivity" />
-        <activity android:name=".MerchantListActivity"
+        <activity
+            android:name=".DetailOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DetailProdukActivity" />
+        </activity>
+        <activity
+            android:name=".MerchantListActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ProductActivity" />
         </activity>
+        <activity android:name=".CheckoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DetailOrderActivity" /></activity>
     </application>
 
 </manifest>

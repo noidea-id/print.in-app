@@ -32,7 +32,7 @@ public class DetailProdukActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), DetailOrderActivity.class);
                 intent.putExtra("satu", 1);
-                intent.putExtra("jenis", "X - Banner ");
+                intent.putExtra("jenis", "Banner Biasa");
                 intent.putExtra("lebar", lebar_txt.getText().toString());
                 intent.putExtra("panjang", panjang_txt.getText().toString());
                 startActivity(intent);

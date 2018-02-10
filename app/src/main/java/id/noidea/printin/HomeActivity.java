@@ -73,6 +73,7 @@ public class HomeActivity extends AppCompatActivity
             TextView name = navigationView.getHeaderView(0).findViewById(R.id.nameView);
 
 //        String imageUrl = session.getAvatar();
+//        Toast.makeText(getBaseContext(),"url : " + session.getAvatar(),Toast.LENGTH_LONG).show();
             name.setText(session.getName());
 //        Picasso.with(getApplicationContext()).load(imageUrl).into(profilePictures);
 

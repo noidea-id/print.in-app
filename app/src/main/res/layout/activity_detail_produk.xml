@@ -79,8 +79,8 @@
                         android:rating="4.3"
                         android:backgroundTint="#f00"
                         android:progressTint="#0f0"
-                        android:secondaryProgressTint="#00f"
-                        android:isIndicator="true"/>
+                        android:secondaryProgressTint="@color/colorPrimaryDark"
+                    android:isIndicator="true"/>
 
                 </RelativeLayout>
 
@@ -202,7 +202,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/harga_rp_75_000_m2"
                         android:textSize="18dp"
-                        android:layout_marginTop="35dp"
+                        android:layout_marginTop="40dp"
                         android:layout_centerVertical="true"
                         android:layout_centerInParent="true"/>
 

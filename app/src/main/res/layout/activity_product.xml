@@ -125,7 +125,7 @@
                         android:id="@+id/profile_picture_user2"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/slide_1"
+                        android:src="@drawable/slide_2"
                         app:civ_border_color="#ecf0f1"
                         android:paddingLeft="5dp"
                         app:civ_border_width="0.5dp" />
@@ -180,7 +180,7 @@
                         android:id="@+id/profile_picture_user3"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/slide_1"
+                        android:src="@drawable/slide_3"
                         app:civ_border_color="#ecf0f1"
                         android:paddingLeft="5dp"
                         app:civ_border_width="0.5dp" />

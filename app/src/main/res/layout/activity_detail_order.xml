@@ -22,7 +22,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Detail Produk"
+                android:text="Detail Pemesanan"
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"/>
         </android.support.v7.widget.Toolbar>
 
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="Rabu"/>
+                    android:text="Sabtu"/>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/box_tanggal"
@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="21/06/2017"/>
+                    android:text="10/02/2018"/>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/box_jam"
@@ -161,68 +161,67 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="08.00 WIB"/>
+                    android:text="12.00 WIB"/>
             </RelativeLayout>
         </LinearLayout>
-        <RelativeLayout
-            android:id="@+id/box_alamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingRight="15dp"
-            android:paddingLeft="10dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/border_bottom">
-            <TextView
-                android:id="@+id/title_alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:textColor="#000"
-                android:textAllCaps="true"
-                android:layout_marginBottom="5dp"
-                android:textStyle="bold"
-                android:text="Alamat"/>
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_below="@+id/title_alamat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:text="Jl. Negla Gg. Al Ikhlas, Isola, Sukasari"/>
-        </RelativeLayout>
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/box_alamat"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingTop="10dp"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:background="@drawable/border_bottom">-->
+            <!--<TextView-->
+                <!--android:id="@+id/title_alamat"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textColor="#000"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="Alamat"/>-->
+            <!--<EditText-->
+                <!--android:id="@+id/alamat"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/title_alamat"-->
+                <!--android:hint="Alamat"/>-->
 
-        <RelativeLayout
-            android:id="@+id/box_detail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/border_bottom"
-            android:paddingBottom="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="15dp"
-            android:paddingTop="10dp">
+        <!--</RelativeLayout>-->
 
-            <TextView
-                android:id="@+id/title_detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="Detail Alamat"
-                android:textStyle="bold"
-                android:textAllCaps="true"
-                android:textColor="#000"
-                android:textSize="15sp" />
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/box_detail"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:background="@drawable/border_bottom"-->
+            <!--android:paddingBottom="10dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="15dp"-->
+            <!--android:paddingTop="10dp">-->
 
-            <TextView
-                android:id="@+id/detail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/title_detail"
-                android:text="No. 21, Depan TK Al Ikhlas, Rumah warna hijau"
-                android:textSize="15sp" />
-        </RelativeLayout>
+            <!--<TextView-->
+                <!--android:id="@+id/title_detail"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:text="KONTAK"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:textColor="#000"-->
+                <!--android:textSize="15sp" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/detail"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@+id/title_detail"-->
+                <!--android:hint="No. Handphone"/>-->
+        <!--</RelativeLayout>-->
 
         <RelativeLayout
             android:id="@+id/box_pesanan"
@@ -255,14 +254,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="Antar-Jemput"/>
+                    android:text="-"/>
                 <TextView
                     android:id="@+id/harga_pesanan1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:layout_alignParentRight="true"
-                    android:text="Gratis"/>
+                    android:text="-"/>
 
             </RelativeLayout>
             <RelativeLayout
@@ -275,14 +274,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
-                    android:text="Kiloan Biasa (4kg)"/>
+                    android:text="-"/>
                 <TextView
                     android:id="@+id/harga_pesanan2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"
                     android:layout_alignParentRight="true"
-                    android:text="Rp 24.000"/>
+                    android:text="-"/>
 
             </RelativeLayout>
         </RelativeLayout>

@@ -76,7 +76,7 @@
                         android:rating="4.3"
                         android:backgroundTint="#f00"
                         android:progressTint="#0f0"
-                        android:secondaryProgressTint="#00f"
+                        android:secondaryProgressTint="@color/colorPrimaryDark"
                         android:isIndicator="true"/>
 
                 </RelativeLayout>
